@@ -5,26 +5,44 @@
 # Вводится строка, нужно сжать ее по алгоритму, описанному выше.
 
 # 2.Создайте список из случайных чисел. Найдите номер его последнего локального 
-#максимума (локальный максимум — это элемент, который больше любого из своих соседей).
-
-# 3.Создайте список из случайных чисел. Найдите максимальное количество 
-# его одинаковых элементов.
+#максимума (локальный максимум — это элемент, который больше любого из 
+# своих соседей).
 
 import random
 some_list = []
 count = int(input('Кол-во элементов: '))
-sum_max = 0
 for i in range(count):
     number = random.randint(1, 10)
     some_list.append(number)
+some_list = [-1] + some_list + [-1]
 print(some_list)
-first_max = 0
-for i in some_list:
-    if i > first_max:
-        first_max = i
-        sum_max =+1
-print('Максимальное число: ', first_max)
-print('Максимальное количество данного элемента: ', sum_max)
+for i in range(-2, -(len(some_list)), -1):
+    if some_list[i-1] < some_list[i] > some_list[i+1]:
+        print((len(some_list)-2) + (i+1))
+        break
+
+
+# 3.Создайте список из случайных чисел. Найдите максимальное количество 
+# его одинаковых элементов.
+
+# import random
+# some_list = []
+# count = int(input('Кол-во элементов: '))
+# sum_max = 0
+# for i in range(count):
+#     number = random.randint(1, 10)
+#     some_list.append(number)
+# print(some_list)
+# first_max = 0
+# for i in set(some_list):
+#     if i > first_max:
+#         first_max = i
+# for i in (some_list):
+#     if i == first_max:
+#         sum_max +=1
+# print('Максимальное число: ', first_max)
+# print('Максимальное количество данного элемента: ', sum_max)
+
 
 # 4.Создайте список из случайных чисел. Найдите второй максимум.
 # a = [1, 2, 3] # Первый максимум == 3, второй == 2
@@ -39,3 +57,5 @@ print('Максимальное количество данного элемен
 # sorted_list = sorted(some_list)
 # print('Первый макимум: ', (sorted_list[-1]))
 # print('Второй максимум: ', (sorted_list[-2]))
+
+
