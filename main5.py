@@ -21,6 +21,7 @@ def new_str(some_str):
         newstring += str(count) + some_str[i]
         i +=1
     return newstring
+
 some_str = input('')
 print(new_str(some_str))
 
