@@ -10,20 +10,20 @@
 # порядке. В рассмотренном примере в итоге получим a2bc3a.
 # Вводится строка, нужно сжать ее по алгоритму, описанному выше.
 
-def new_str(some_str):
-    newstring = ''
-    i = 0
-    while i < len(some_str):
-        count = 1
-        while i + 1 < len(some_str) and some_str[i] == some_str[i + 1]:
-            count +=1
-            i +=1
-        newstring += str(count) + some_str[i]
-        i +=1
-    return newstring
+# def new_str(some_str):
+#     newstring = ''
+#     i = 0
+#     while i < len(some_str):
+#         count = 1
+#         while i + 1 < len(some_str) and some_str[i] == some_str[i + 1]:
+#             count +=1
+#             i +=1
+#         newstring += str(count) + some_str[i]
+#         i +=1
+#     return newstring
 
-some_str = input('')
-print(new_str(some_str))
+# some_str = input('')
+# print(new_str(some_str))
 
 
 # 2.Создайте список из случайных чисел. Найдите номер его последнего локального 
