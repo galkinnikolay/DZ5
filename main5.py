@@ -13,12 +13,18 @@
 import random
 some_list = []
 count = int(input('Кол-во элементов: '))
-for _ in range(count):
+sum_max = 0
+for i in range(count):
     number = random.randint(1, 10)
     some_list.append(number)
 print(some_list)
-sorted_list = sorted(some_list)
-
+first_max = 0
+for i in some_list:
+    if i > first_max:
+        first_max = i
+        sum_max =+1
+print('Максимальное число: ', first_max)
+print('Максимальное количество данного элемента: ', sum_max)
 
 # 4.Создайте список из случайных чисел. Найдите второй максимум.
 # a = [1, 2, 3] # Первый максимум == 3, второй == 2
@@ -26,7 +32,7 @@ sorted_list = sorted(some_list)
 # import random
 # some_list = []
 # count = int(input('Кол-во элементов: '))
-# for _ in range(count):
+# for i in range(count):
 #     number = random.randint(1, 10)
 #     some_list.append(number)
 # print(some_list)
