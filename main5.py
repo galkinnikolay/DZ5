@@ -10,6 +10,16 @@
 # 3.Создайте список из случайных чисел. Найдите максимальное количество 
 # его одинаковых элементов.
 
+import random
+some_list = []
+count = int(input('Кол-во элементов: '))
+for _ in range(count):
+    number = random.randint(1, 10)
+    some_list.append(number)
+print(some_list)
+sorted_list = sorted(some_list)
+
+
 # 4.Создайте список из случайных чисел. Найдите второй максимум.
 # a = [1, 2, 3] # Первый максимум == 3, второй == 2
 
